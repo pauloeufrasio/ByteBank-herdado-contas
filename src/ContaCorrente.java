@@ -4,4 +4,11 @@ public class ContaCorrente extends Conta  {
 
 
     }
+    // regra nova implementando no codigo
+
+    @Override // Anotação na configuração
+    public boolean saca(double valor) {
+        double valorSacar = valor + 0.2;
+        return super.saca(valor);
+    }
 }
