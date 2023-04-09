@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta  {
+public class ContaCorrente extends Conta implements Tributavel  {
     public ContaCorrente(int agencia, int numero){  // Criando construtor especifico dessa classe atribuirdo parametro agencia e numero
         super(agencia,numero); // chamando classe mae
 
@@ -7,8 +7,18 @@ public class ContaCorrente extends Conta  {
     // regra nova implementando no codigo
 
     @Override // Anotação na configuração
-    public boolean saca(double valor) {
+    public void saca(double valor) throws SaldoInsuficienteException {
         double valorSacar = valor + 0.2;
-        return super.saca(valor);
+        super.saca(valor);
+    }
+
+    @Override
+    public void deposita(double valor) {
+       super.saldo += valor;
+    }
+
+    @Override
+    public double getValorImposto() {
+        return 0;
     }
 }
