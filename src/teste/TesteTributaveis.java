@@ -1,3 +1,9 @@
+package teste;
+
+import modelo.CalculadorDeImposto;
+import modelo.ContaCorrente;
+import modelo.SeguroDeVida;
+
 public class TesteTributaveis {
     public static void main(String[] args) {
         ContaCorrente paulo = new ContaCorrente(123,456);

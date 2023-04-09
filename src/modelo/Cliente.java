@@ -1,3 +1,5 @@
+package modelo;
+
 public class Cliente {
     // Criando get quando o valor so retorna
     public String getNome() {

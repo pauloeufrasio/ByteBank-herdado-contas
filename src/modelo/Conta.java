@@ -1,3 +1,7 @@
+package modelo;
+
+import teste.SaldoInsuficienteException;
+
 public abstract class Conta {
     // Declarando os atributos da classe conta Privados
     protected double saldo;
@@ -17,7 +21,7 @@ public abstract class Conta {
         return total;
     }
 
-    // Criando construtor e passando parametro agencia e numero como argumento ou seja toda vez que instanciar a classe Conta terá que ter agencia e numero
+    // Criando construtor e passando parametro agencia e numero como argumento ou seja toda vez que instanciar a classe modelo.Conta terá que ter agencia e numero
     public Conta(int agencia, int numero) {
         // Criando um contador de contas total++
         total++;

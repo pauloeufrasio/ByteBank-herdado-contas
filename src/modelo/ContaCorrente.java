@@ -1,4 +1,8 @@
-public class ContaCorrente extends Conta implements Tributavel  {
+package modelo;
+
+import teste.SaldoInsuficienteException;
+
+public class ContaCorrente extends Conta implements Tributavel {
     public ContaCorrente(int agencia, int numero){  // Criando construtor especifico dessa classe atribuirdo parametro agencia e numero
         super(agencia,numero); // chamando classe mae
 
