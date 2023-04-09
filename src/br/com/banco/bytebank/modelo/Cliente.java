@@ -1,4 +1,4 @@
-package modelo;
+package br.com.banco.bytebank.modelo;
 
 public class Cliente {
     // Criando get quando o valor so retorna

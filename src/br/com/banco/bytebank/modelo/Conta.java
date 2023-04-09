@@ -1,12 +1,10 @@
-package modelo;
-
-import teste.SaldoInsuficienteException;
+package br.com.banco.bytebank.modelo;
 
 public abstract class Conta {
     // Declarando os atributos da classe conta Privados
     protected double saldo;
     private int agencia;
-    // Criando atributo static obs: static é um metodo da classe e metodos static pra invocar voce chama atraves da classe
+    // Criando atributo static obs: static ï¿½ um metodo da classe e metodos static pra invocar voce chama atraves da classe
     private static int total = 0;
 
     public Conta() {
@@ -21,11 +19,11 @@ public abstract class Conta {
         return total;
     }
 
-    // Criando construtor e passando parametro agencia e numero como argumento ou seja toda vez que instanciar a classe modelo.Conta terá que ter agencia e numero
+    // Criando construtor e passando parametro agencia e numero como argumento ou seja toda vez que instanciar a classe bytebank.bytebank.banco.modelo.bytebank.banco.modelo.Conta terï¿½ que ter agencia e numero
     public Conta(int agencia, int numero) {
         // Criando um contador de contas total++
         total++;
-        System.out.println("Total de contas é " + total);
+        System.out.println("Total de contas ï¿½ " + total);
         this.agencia = agencia;
         this.numero = numero;
         System.out.println(" Estou criando uma conta " + agencia);
@@ -37,7 +35,7 @@ public abstract class Conta {
         return saldo;
     }
 
-    // Criando set quando for edita alguma informação
+    // Criando set quando for edita alguma informaï¿½ï¿½o
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
@@ -46,10 +44,10 @@ public abstract class Conta {
         return agencia;
     }
 
-    // Criando condição Não pode valor menor ou igual a zero
+    // Criando condiï¿½ï¿½o Nï¿½o pode valor menor ou igual a zero
     public void setAgencia(int agencia) {
         if (agencia <= 0) {
-            System.out.println(" Não pode valor menor ou igual a zero ");
+            System.out.println(" Nï¿½o pode valor menor ou igual a zero ");
         }
         this.agencia = agencia;
     }
@@ -58,10 +56,10 @@ public abstract class Conta {
         return numero;
     }
 
-    // Criando condição Não pode valor menor ou igual a zero
+    // Criando condiï¿½ï¿½o Nï¿½o pode valor menor ou igual a zero
     public void setNumero(int numero) {
         if (numero <= 0) {
-            System.out.println(" Não pode valor menor ou igual a zero ");
+            System.out.println(" Nï¿½o pode valor menor ou igual a zero ");
         }
         this.numero = numero;
     }
@@ -80,16 +78,16 @@ public abstract class Conta {
     // Criando o metodo deposita que recebe (valor) como parametro e retorna saldo o que ta nele mesmo mais o (valor)
     public abstract void deposita(double valor);
 
-    // Criando o metodo saca que tambem recebe valor como parametro obs: A variavel (valor) é diferente da variavel do metodo deposita.
+    // Criando o metodo saca que tambem recebe valor como parametro obs: A variavel (valor) ï¿½ diferente da variavel do metodo deposita.
     public void saca(double valor) throws SaldoInsuficienteException {
         // Problema
         if (this.saldo < valor) {
-            // Lançar exceção retornando uma mensagem da exceção
+            // Lanï¿½ar exceï¿½ï¿½o retornando uma mensagem da exceï¿½ï¿½o
             throw new SaldoInsuficienteException("Saldo: " + this.saldo + " Valor: " + valor);
         }
         // Se for maior que o valor
         this.saldo -= valor;
-        System.out.println("Transação concluida o saldo total do valor é " + this.saldo);
+        System.out.println("Transaï¿½ï¿½o concluida o saldo total do valor ï¿½ " + this.saldo);
     }
 
     // Criando metodo transfere recebendo valor como parametro e conta destino

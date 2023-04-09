@@ -1,4 +1,4 @@
-package modelo;
+package br.com.banco.bytebank.modelo;
 
 public class ContaPoupanca extends Conta {
     // Criando construtor especifico dessa classe atribuirdo parametro agencia e numero

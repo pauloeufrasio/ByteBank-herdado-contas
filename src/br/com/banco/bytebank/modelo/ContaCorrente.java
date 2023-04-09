@@ -1,6 +1,4 @@
-package modelo;
-
-import teste.SaldoInsuficienteException;
+package br.com.banco.bytebank.modelo;
 
 public class ContaCorrente extends Conta implements Tributavel {
     public ContaCorrente(int agencia, int numero){  // Criando construtor especifico dessa classe atribuirdo parametro agencia e numero
