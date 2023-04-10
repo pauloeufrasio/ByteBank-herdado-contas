@@ -1,5 +1,6 @@
 package br.com.banco.bytebank.modelo.teste;
 
+import br.com.banco.bytebank.modelo.Cliente;
 import br.com.banco.bytebank.modelo.Conta;
 import br.com.banco.bytebank.modelo.ContaCorrente;
 import br.com.banco.bytebank.modelo.ContaPoupanca;
@@ -9,12 +10,15 @@ public class Teste {
         System.out.println("x");
         System.out.println(3);
         System.out.println(false);
-        ContaCorrente cc = new ContaCorrente(22, 33);
-        ContaPoupanca cp = new ContaPoupanca(33, 22);
+
+        Object cc = new ContaCorrente(22, 33);
+        Object cp = new ContaPoupanca(33, 22);
+        Object cliente = new Cliente();
+
         System.out.println(cc);
         System.out.println(cp);
 
-        println(cc);
+       // println(cliente);
     }
 
     static void println() {}
