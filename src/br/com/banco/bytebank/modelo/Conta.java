@@ -1,5 +1,11 @@
 package br.com.banco.bytebank.modelo;
 
+/**
+ * Classe que representa a conta.
+ * @author Paulo Henrique.
+ */
+
+// Definição public: visivel em todos os lugares
 public abstract class Conta {
     // Declarando os atributos da classe conta Privados
     protected double saldo;
@@ -19,7 +25,11 @@ public abstract class Conta {
         return total;
     }
 
-    // Criando construtor e passando parametro agencia e numero como argumento ou seja toda vez que instanciar a classe bytebank.bytebank.banco.modelo.bytebank.banco.modelo.Conta ter� que ter agencia e numero
+    /**
+     * Construtor para inicializar o objeto Conta a partir da agencia e numero
+     * @param agencia
+     * @param numero
+     */
     public Conta(int agencia, int numero) {
         // Criando um contador de contas total++
         total++;
@@ -47,7 +57,7 @@ public abstract class Conta {
     // Criando condi��o N�o pode valor menor ou igual a zero
     public void setAgencia(int agencia) {
         if (agencia <= 0) {
-            System.out.println(" N�o pode valor menor ou igual a zero ");
+            System.out.println(" Nao pode valor menor ou igual a zero ");
         }
         this.agencia = agencia;
     }
@@ -56,10 +66,13 @@ public abstract class Conta {
         return numero;
     }
 
-    // Criando condi��o N�o pode valor menor ou igual a zero
+    /**
+     * Criando condição Nao pode valor menor ou igual a zero
+     * @param numero
+     */
     public void setNumero(int numero) {
         if (numero <= 0) {
-            System.out.println(" N�o pode valor menor ou igual a zero ");
+            System.out.println(" Nao pode valor menor ou igual a zero ");
         }
         this.numero = numero;
     }
@@ -78,7 +91,14 @@ public abstract class Conta {
     // Criando o metodo deposita que recebe (valor) como parametro e retorna saldo o que ta nele mesmo mais o (valor)
     public abstract void deposita(double valor);
 
-    // Criando o metodo saca que tambem recebe valor como parametro obs: A variavel (valor) � diferente da variavel do metodo deposita.
+    //
+
+    /**
+     * Valor precisa ser maior que o saldo
+     * Criando o metodo saca que tambem recebe valor como parametro obs: A variavel (valor) � diferente da variavel do metodo deposita.
+     * @param valor
+     * @throws SaldoInsuficienteException
+     */
     public void saca(double valor) throws SaldoInsuficienteException {
         // Problema
         if (this.saldo < valor) {
@@ -87,10 +107,16 @@ public abstract class Conta {
         }
         // Se for maior que o valor
         this.saldo -= valor;
-        System.out.println("Transa��o concluida o saldo total do valor � " + this.saldo);
+        System.out.println("Transacao concluida o saldo total do valor é " + this.saldo);
     }
 
-    // Criando metodo transfere recebendo valor como parametro e conta destino
+    /**
+     *  Tem exceção Criada SaldoInsuficienteException
+     * Criando metodo transfere recebendo valor como parametro e conta destino
+     * @param valor
+     * @param destino
+     * @throws SaldoInsuficienteException
+     */
     public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
         this.saca(valor);
         destino.deposita(valor);

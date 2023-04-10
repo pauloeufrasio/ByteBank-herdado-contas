@@ -1,5 +1,11 @@
 package br.com.banco.bytebank.modelo;
 
+/**
+ *  Classe que representa um cliente no ByteBank
+ *
+ *  @author paulo henrique
+ */
+
 public class Cliente {
     // Criando get quando o valor so retorna
     public String getNome() {
