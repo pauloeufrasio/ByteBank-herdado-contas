@@ -23,7 +23,7 @@ public class Teste {
 
     static void println(boolean valor) {}
 
-    static void println(Conta conta){}
+    static void println(Object referencia){}
 
 }
 
