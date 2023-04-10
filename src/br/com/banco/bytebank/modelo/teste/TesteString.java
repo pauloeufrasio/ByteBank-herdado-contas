@@ -6,7 +6,7 @@ public class TesteString {
         // uma String nao pode ser auterado
         String nome =" Alura "; // object literal
 
-        // pra alterar tem que criar uma nova String
+        // pra alterar tem que criar uma nova String utilizando replace
         String outra = nome.replace("A", "a");
 
         System.out.println(outra);
