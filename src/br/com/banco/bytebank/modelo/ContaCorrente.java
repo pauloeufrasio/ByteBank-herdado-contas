@@ -1,6 +1,8 @@
 package br.com.banco.bytebank.modelo;
 
-public class ContaCorrente extends Conta implements Tributavel {
+import java.io.Serializable;
+
+public class ContaCorrente extends Conta implements Tributavel,Serializable{
     public ContaCorrente(int agencia, int numero){  // Criando construtor especifico dessa classe atribuirdo parametro agencia e numero
         super(agencia,numero); // chamando classe mae
 

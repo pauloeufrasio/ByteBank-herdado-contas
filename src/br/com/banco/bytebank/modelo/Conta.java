@@ -77,21 +77,19 @@ public abstract class Conta {
         this.numero = numero;
     }
 
-    public String getTitular() {
+    public Cliente getTitular() {
         return titular;
     }
 
-    public void setTitular(String titular) {
+    public void setTitular(Cliente titular) {
         this.titular = titular;
     }
 
     private int numero;
-    String titular;
+     private Cliente titular;
 
     // Criando o metodo deposita que recebe (valor) como parametro e retorna saldo o que ta nele mesmo mais o (valor)
     public abstract void deposita(double valor);
-
-    //
 
     /**
      * Valor precisa ser maior que o saldo
