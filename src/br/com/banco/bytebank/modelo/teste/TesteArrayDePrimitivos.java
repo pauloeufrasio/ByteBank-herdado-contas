@@ -1,6 +1,6 @@
 package br.com.banco.bytebank.modelo.teste;
 
-public class teste {
+public class TesteArrayDePrimitivos {
 
     // Array[]
     public static void main(String[] args) {
