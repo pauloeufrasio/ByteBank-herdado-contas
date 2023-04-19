@@ -9,7 +9,7 @@ public class TesteArrayReferencias {
     public static void main(String[] args) {
 
         // criar objeto  que guarda 5 referencias de contas, obs: nenhuma conta foi criado e sim um array que guarda 5 referencia
-        Object[] referencias = new Object[5];
+        Conta[] referencias = new Conta[5];
 
         // criar conta poupança
         ContaCorrente cc1 = new ContaCorrente(22,11);
@@ -23,7 +23,7 @@ public class TesteArrayReferencias {
 
         // Criar cliente
         Cliente cliente = new Cliente();
-        referencias[2] = cliente;
+        //referencias[2] = cliente;
 
         // Cast de referencia transformando refencia do tipo mais generico pra um tipo mais especifico
         ContaPoupanca ref = (ContaPoupanca) referencias[1]; // type cast

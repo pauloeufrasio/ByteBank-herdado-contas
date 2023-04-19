@@ -25,4 +25,8 @@ public class ContaCorrente extends Conta implements Tributavel,Serializable{
     public double getValorImposto() {
         return 0;
     }
+    @Override
+    public String toString(){
+        return "ContaCorrente, " + super.toString();
+    }
 }
