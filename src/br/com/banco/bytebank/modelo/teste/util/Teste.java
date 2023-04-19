@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Teste {
     public static void main(String[] args) {
         // Criar lista de Conta que só aceita referencia do tipo Conta
-        ArrayList <Conta>lista = new ArrayList<Conta>();
+        ArrayList <Conta>lista = new ArrayList<Conta>();// Generics
 
         Conta cc = new ContaCorrente(22,11);
         lista.add(cc);
@@ -38,8 +38,8 @@ public class Teste {
         }
         System.out.println("--------------");
         // jeito simplificado de accesar elementos com laço for
-        for (Object oRef :lista){
-            System.out.println(oRef);
+        for (Conta conta :lista){
+            System.out.println(conta);
 
         }
     }
