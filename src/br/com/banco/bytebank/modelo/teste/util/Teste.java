@@ -10,6 +10,7 @@ public class Teste {
         // Criar lista de Conta que só aceita referencia do tipo Conta
         ArrayList <Conta>lista = new ArrayList<Conta>();// Generics
 
+
         Conta cc = new ContaCorrente(22,11);
         lista.add(cc);
 
