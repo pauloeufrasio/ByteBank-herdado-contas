@@ -5,7 +5,7 @@ import br.com.banco.bytebank.modelo.ContaCorrente;
 
 import java.util.ArrayList;
 
-public class Teste {
+public class TesteList {
     public static void main(String[] args) {
         // Criar lista de Conta que só aceita referencia do tipo Conta
         ArrayList <Conta>lista = new ArrayList<Conta>();// Generics
