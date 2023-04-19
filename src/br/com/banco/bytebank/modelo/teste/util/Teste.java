@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Teste {
     public static void main(String[] args) {
-        // Criar lista de Conta que só aceita obejeto do tipo Conta
+        // Criar lista de Conta que só aceita referencia do tipo Conta
         ArrayList <Conta>lista = new ArrayList<Conta>();
 
         Conta cc = new ContaCorrente(22,11);
