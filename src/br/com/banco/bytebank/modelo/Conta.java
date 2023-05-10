@@ -2,6 +2,7 @@ package br.com.banco.bytebank.modelo;
 
 /**
  * Classe que representa a conta.
+ *
  * @author Paulo Henrique.
  */
 
@@ -27,16 +28,17 @@ public abstract class Conta {
 
     /**
      * Construtor para inicializar o objeto Conta a partir da agencia e numero
+     *
      * @param agencia
      * @param numero
      */
     public Conta(int agencia, int numero) {
         // Criando um contador de contas total++
         total++;
-        System.out.println("Total de contas � " + total);
+        //System.out.println("Total de contas � " + total);
         this.agencia = agencia;
         this.numero = numero;
-        System.out.println(" Estou criando uma conta " + agencia);
+        //System.out.println(" Estou criando uma conta " + agencia);
 
     }
 
@@ -68,6 +70,7 @@ public abstract class Conta {
 
     /**
      * Criando condição Nao pode valor menor ou igual a zero
+     *
      * @param numero
      */
     public void setNumero(int numero) {
@@ -86,7 +89,7 @@ public abstract class Conta {
     }
 
     private int numero;
-     private Cliente titular;
+    private Cliente titular;
 
     // Criando o metodo deposita que recebe (valor) como parametro e retorna saldo o que ta nele mesmo mais o (valor)
     public abstract void deposita(double valor);
@@ -94,6 +97,7 @@ public abstract class Conta {
     /**
      * Valor precisa ser maior que o saldo
      * Criando o metodo saca que tambem recebe valor como parametro obs: A variavel (valor) � diferente da variavel do metodo deposita.
+     *
      * @param valor
      * @throws SaldoInsuficienteException
      */
@@ -109,8 +113,9 @@ public abstract class Conta {
     }
 
     /**
-     *  Tem exceção Criada SaldoInsuficienteException
+     * Tem exceção Criada SaldoInsuficienteException
      * Criando metodo transfere recebendo valor como parametro e conta destino
+     *
      * @param valor
      * @param destino
      * @throws SaldoInsuficienteException
@@ -120,4 +125,24 @@ public abstract class Conta {
         destino.deposita(valor);
 
     }
+
+    // Criar metodo pra comparar se conta e igual a outra conta
+    @Override
+    public boolean equals(Object ref) {
+        // Cast
+        Conta outra = (Conta) ref;
+
+        if (this.agencia != outra.agencia) {
+            return false;
+        }
+        if (this.numero != outra.numero) {
+            return false;
+        }
+        return true;
+    }
+
+    public String toString() {
+        return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+    }
+
 }

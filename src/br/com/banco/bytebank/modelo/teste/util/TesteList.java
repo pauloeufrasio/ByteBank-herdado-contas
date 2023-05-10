@@ -4,11 +4,13 @@ import br.com.banco.bytebank.modelo.Conta;
 import br.com.banco.bytebank.modelo.ContaCorrente;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class TesteList {
     public static void main(String[] args) {
         // Criar lista de Conta que só aceita referencia do tipo Conta
-        ArrayList <Conta>lista = new ArrayList<Conta>();// Generics
+        List<Conta> lista = new ArrayList<Conta>();// Generics
 
 
         Conta cc = new ContaCorrente(22,11);
