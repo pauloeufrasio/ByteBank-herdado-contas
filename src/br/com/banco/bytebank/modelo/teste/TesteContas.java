@@ -7,7 +7,7 @@ import br.com.banco.bytebank.modelo.SaldoInsuficienteException;
 public class TesteContas {
     public static void main(String[] args) throws SaldoInsuficienteException {
 
-        // Criando cliente cc
+        // Criando Conta cc
         ContaCorrente cc = new ContaCorrente(111, 111);
         cc.deposita(100.0);
         // atribuir valor atrave do metodo deposita herdado da classe mae
