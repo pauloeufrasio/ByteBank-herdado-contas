@@ -3,7 +3,7 @@ package br.com.banco.bytebank.modelo.teste.util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TesteWrapperInteger {
+public class TesteWrapperInteger{
     public static void main(String[] args) {
 
         int idade = 29;
