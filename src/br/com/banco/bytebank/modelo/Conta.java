@@ -142,7 +142,7 @@ public abstract class Conta {
     }
 
     public String toString() {
-        return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+        return "Numero: " + this.numero + ", Agencia: " + this.agencia + ", Saldo: " + this.saldo;
     }
 
 }
