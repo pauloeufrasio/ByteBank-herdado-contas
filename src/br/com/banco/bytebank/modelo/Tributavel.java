@@ -1,5 +1,6 @@
 package br.com.banco.bytebank.modelo;
 
 public interface Tributavel {
-    public abstract double getValorImposto();
+    // Método abstrato que deve ser implementado pelas classes que implementam esta interface
+    double getValorImposto();
 }

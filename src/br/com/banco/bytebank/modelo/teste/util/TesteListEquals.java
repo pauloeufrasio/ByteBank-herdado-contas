@@ -9,26 +9,26 @@ import java.util.ArrayList;
 public class TesteListEquals {
     public static void main(String[] args) {
 
-        // Criar lista de Conta que só aceita referencia do tipo Conta
-        ArrayList <Conta>lista = new ArrayList<Conta>();// Generics
+        // Criar uma lista de Conta que só aceita referência do tipo Conta
+        ArrayList<Conta> lista = new ArrayList<Conta>(); // Uso de Generics
 
-        Conta cc = new ContaCorrente(23,20);
+        Conta cc = new ContaCorrente(23, 20);
         lista.add(cc);
 
-        Conta cc2 = new ContaCorrente(22,22);
+        Conta cc2 = new ContaCorrente(22, 22);
         lista.add(cc2);
 
-        Conta cc3 = new ContaPoupanca(22,22);
+        Conta cc3 = new ContaPoupanca(22, 22);
         lista.add(cc3);
 
-        // Criar variael pra saber se existe conta
+        // Verificar se existe uma conta igual a cc2 na lista
         boolean existe = lista.contains(cc2);
-        System.out.println("Ja existe " + existe);
+        System.out.println("Já existe? " + existe);
 
-        // jeito simplificado de accesar elementos com laço for
-        for (Conta conta :lista){
+        // Jeito simplificado de acessar elementos com laço for-each
+        for (Conta conta : lista) {
             System.out.println(conta);
-
         }
     }
 }
+

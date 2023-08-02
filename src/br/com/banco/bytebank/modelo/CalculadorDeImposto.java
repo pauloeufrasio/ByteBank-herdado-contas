@@ -3,12 +3,15 @@ package br.com.banco.bytebank.modelo;
 public class CalculadorDeImposto {
     private double totalImposto;
 
-    public void registra(Tributavel t){
+    // Método para registrar um objeto tributável e calcular seu imposto
+    public void registra(Tributavel t) {
         double valor = t.getValorImposto();
-        this.totalImposto +=valor;
-
+        this.totalImposto += valor;
     }
-    public double getTotalImposto(){
-        return getTotalImposto();
+
+    // Método para obter o total de imposto acumulado
+    public double getTotalImposto() {
+        return this.totalImposto;
     }
 }
+

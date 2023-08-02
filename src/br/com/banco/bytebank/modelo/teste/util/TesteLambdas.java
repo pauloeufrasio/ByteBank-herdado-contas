@@ -14,7 +14,7 @@ public class TesteLambdas {
 
     public static void main(String[] args) {
 
-        // criando conta e cliente e atribuir nomes e metodo deposita
+        // Criação de contas e clientes
         Conta cc1 = new ContaCorrente(22, 33);
         Cliente clienteCC1 = new Cliente();
         clienteCC1.setNome("Nico");
@@ -47,18 +47,20 @@ public class TesteLambdas {
         lista.add(cc4);
 
         // Function Object = Um objeto que encapsula uma função
-        lista.sort( (Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero()) );// Lambdas e usado atraves de uma seta
-        
-        Comparator <Conta> camp = (Conta c1, Conta c2) -> { // Lambdas e usado atraves de uma seta
-                String nomeC1 = c1.getTitular().getNome();
-                String nomeC2 = c2.getTitular().getNome();
-                return nomeC1.compareTo(nomeC2);
+        // Ordenando a lista de contas por número de conta usando Lambdas
+        lista.sort((Conta c1, Conta c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
+        // Criando outra função com Lambdas para ordenar a lista por nome do titular
+        Comparator<Conta> camp = (Conta c1, Conta c2) -> {
+            String nomeC1 = c1.getTitular().getNome();
+            String nomeC2 = c2.getTitular().getNome();
+            return nomeC1.compareTo(nomeC2);
         };
 
         lista.sort(camp);
 
-        // método forEach codigo mais enxuto
-        lista.forEach( (conta) -> System.out.println(conta+ ", " + conta.getTitular().getNome()));// Lambdas
+        // Utilizando o método forEach para imprimir os dados das contas de forma mais enxuta
+        lista.forEach(conta -> System.out.println(conta + ", " + conta.getTitular().getNome()));
     }
 }
+

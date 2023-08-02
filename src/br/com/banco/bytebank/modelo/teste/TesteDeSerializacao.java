@@ -10,13 +10,16 @@ public class TesteDeSerializacao {
 
         // Gravando arquivo pra pasta cc.bin
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cc.bin"));
-        // cast
+
+        // Leitura do objeto serializado
         ContaCorrente cc = (ContaCorrente) ois.readObject();
+
+        // Fechando o stream de leitura
         ois.close();
+
+        // Impressão dos dados do objeto lido
         System.out.println(cc.getSaldo());
         System.out.println(cc.getTitular().getNome());
         System.out.println(cc.getSaldo());
-
-
     }
 }

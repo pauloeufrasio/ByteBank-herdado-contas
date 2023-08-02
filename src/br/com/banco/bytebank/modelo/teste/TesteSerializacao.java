@@ -11,24 +11,21 @@ import java.io.ObjectOutputStream;
 public class TesteSerializacao {
     public static void main(String[] args) throws IOException {
 
+        // Criando um objeto Cliente
         Cliente cliente = new Cliente();
         cliente.setNome("Paulo");
         cliente.setProfissao("Dev");
         cliente.setCpf("123456789");
 
-        // Criando conta corrente
-        ContaCorrente cc = new ContaCorrente(222,333);
+        // Criando uma conta corrente
+        ContaCorrente cc = new ContaCorrente(222, 333);
         cc.setTitular(cliente);
         cc.deposita(222.3);
 
-        // Gravando objeto e criando  arquivo cc.bin
+        // Gravando o objeto ContaCorrente no arquivo cc.bin
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("cc.bin"));
         oos.writeObject(cc);
         oos.close();
-
-
-
-
-
     }
 }
+
